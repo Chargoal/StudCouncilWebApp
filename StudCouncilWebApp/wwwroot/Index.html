@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Informatics-2022-Lab2 Student Council</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Informatics-2022-Lab2 Student Council</h1>
+    <h3>Add Faculty</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addFaculty()">
+        <input type="text" id="add-facultyName" placeholder="New Faculty">
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editFaculty">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateFaculty()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-facultyName">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <tbody id="faculties"></tbody>
+    </table>
+
+    <script src="js/lab2.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getFaculties();
+    </script>
+</body>
+</html>
